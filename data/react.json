@@ -1,0 +1,351 @@
+[
+  {
+  "number": 1,
+  "emoji": "📦",
+  "title": "Variáveis",
+  "color": "amber",
+  "commands": [
+    {
+      "cmd": "let x = 10;",
+      "desc": "Declara uma variável com escopo de bloco. Pode ser atualizada posteriormente, mas não redeclarada no mesmo escopo. Exemplo: let x = 10; x = 20; // Válido."
+    },
+    {
+      "cmd": "const y = 20;",
+      "desc": "Declara uma constante com escopo de bloco. Deve ser inicializada na declaração e **não pode ser reatribuída**. Exemplo: const y = 20; y = 30; // Erro!"
+    },
+    {
+      "cmd": "var z = 30;",
+      "desc": "Declara uma variável com escopo de função. Pode ser redeclarada e reatribuída, mas seu uso é desencorajado em código moderno, pois ignora blocos (como if/for) e pode causar comportamentos inesperados."
+    }
+  ]
+},
+
+  {
+  "number": 2,
+  "emoji": "🔤",
+  "title": "Tipos de Dados",
+  "color": "yellow",
+  "commands": [
+    {
+      "cmd": "let nome = \"João\";",
+      "desc": "Tipo de dado: **string**. Representa uma cadeia de caracteres. Deve estar entre aspas simples ou duplas. Pode conter texto, números ou símbolos: exemplo — `\"João\"`, `'abc'`, `\"123\"`."
+    },
+    {
+      "cmd": "let idade = 25;",
+      "desc": "Tipo de dado: **number**. Representa tanto números inteiros quanto de ponto flutuante. JavaScript não diferencia entre int e float: `25`, `3.14`, `-7` são todos numbers."
+    },
+    {
+      "cmd": "let ativo = true;",
+      "desc": "Tipo de dado: **boolean**. Representa apenas dois valores: `true` (verdadeiro) ou `false` (falso). Muito usado em condições e comparações lógicas."
+    },
+    {
+      "cmd": "let nada = null;",
+      "desc": "Tipo de dado: **null**. Representa a **ausência intencional de valor**. É atribuído manualmente para indicar que a variável está vazia ou sem valor útil."
+    },
+    {
+      "cmd": "let indefinido;",
+      "desc": "Tipo de dado: **undefined**. Quando uma variável é declarada mas **não inicializada**, seu valor padrão é `undefined`. Também ocorre quando uma função não retorna nada explicitamente."
+    }
+  ]
+},
+  {
+  "number": 3,
+  "emoji": "➕",
+  "title": "Operadores",
+  "color": "red",
+  "commands": [
+    {
+      "cmd": "+  -  *  /  %  **",
+      "desc": "**Operadores aritméticos**: usados para realizar operações matemáticas.\n\n- `+` adição\n- `-` subtração\n- `*` multiplicação\n- `/` divisão\n- `%` módulo (resto da divisão)\n- `**` exponenciação (ex: 2 ** 3 = 8)"
+    },
+    {
+      "cmd": "==  ===  !=  !==  >  <  >=  <=",
+      "desc": "**Operadores de comparação**: comparam valores e retornam um booleano (true/false).\n\n- `==` igual (com conversão de tipo)\n- `===` estritamente igual (sem conversão)\n- `!=` diferente (com conversão)\n- `!==` estritamente diferente\n- `>` maior que\n- `<` menor que\n- `>=` maior ou igual\n- `<=` menor ou igual"
+    },
+    {
+      "cmd": "&&  ||  !",
+      "desc": "**Operadores lógicos**:\n\n- `&&` (E lógico): true se ambos os lados forem verdadeiros\n- `||` (OU lógico): true se pelo menos um lado for verdadeiro\n- `!` (negação): inverte o valor booleano — `!true` é `false`"
+    },
+    {
+      "cmd": "=  +=  -=  *=  /=",
+      "desc": "**Operadores de atribuição**:\n\n- `=` atribuição básica\n- `+=` soma e atribui (ex: `x += 2` é o mesmo que `x = x + 2`)\n- `-=` subtrai e atribui\n- `*=` multiplica e atribui\n- `/=` divide e atribui"
+    },
+    {
+      "cmd": "condição ? valor1 : valor2",
+      "desc": "**Operador ternário**: forma compacta de um `if/else`.\n\nSintaxe: `condição ? valorSeVerdadeiro : valorSeFalso`\n\nExemplo: `idade >= 18 ? 'Adulto' : 'Menor';`"
+    }
+  ]
+},
+  {
+  "number": 4,
+  "emoji": "🔁",
+  "title": "Estruturas de Controle",
+  "color": "blue",
+  "commands": [
+    {
+      "cmd": "if (condição) { ... }",
+      "desc": "Executa um bloco de código **se** a condição for verdadeira.\n\nExemplo:\n```js\nif (idade >= 18) {\n  console.log('Maior de idade');\n}\n```"
+    },
+    {
+      "cmd": "else if { ... }",
+      "desc": "Permite adicionar **outras condições** caso a anterior não seja satisfeita. Pode ser usado em conjunto com `if` e `else`.\n\nExemplo:\n```js\nif (x > 0) {\n  ...\n} else if (x < 0) {\n  ...\n}\n```"
+    },
+    {
+      "cmd": "switch (valor) { case ... }",
+      "desc": "Usado para comparar uma variável com **vários valores possíveis** (casos). Útil quando há muitas condições baseadas no mesmo valor.\n\nExemplo:\n```js\nswitch (dia) {\n  case 'segunda': ... break;\n  case 'terça': ... break;\n  default: ...\n}\n```"
+    },
+    {
+      "cmd": "for (let i = 0; i < 5; i++) {}",
+      "desc": "**Laço for**: executa um bloco de código um número específico de vezes. Possui três partes: inicialização, condição, incremento.\n\nExemplo:\n```js\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n```"
+    },
+    {
+      "cmd": "while (condição) {}",
+      "desc": "**Laço while**: repete um bloco de código **enquanto** a condição for verdadeira. Útil quando o número de repetições não é conhecido.\n\nExemplo:\n```js\nwhile (contador < 5) {\n  contador++;\n}\n```"
+    },
+    {
+      "cmd": "do { ... } while (condição);",
+      "desc": "**Laço do/while**: semelhante ao `while`, mas **executa pelo menos uma vez**, mesmo que a condição seja falsa desde o início.\n\nExemplo:\n```js\ndo {\n  console.log('Executa pelo menos uma vez');\n} while (false);\n```"
+    }
+  ]
+},
+  {
+  "number": 5,
+  "emoji": "⚙",
+  "title": "Funções",
+  "color": "green",
+  "commands": [
+    {
+      "cmd": "function soma(a, b) { return a + b; }",
+      "desc": "**Função tradicional**: forma clássica de declarar uma função em JavaScript. Pode ser chamada antes da declaração (hoisting).\n\nExemplo:\n```js\nfunction soma(a, b) {\n  return a + b;\n}\n```"
+    },
+    {
+      "cmd": "const soma = (a, b) => a + b;",
+      "desc": "**Arrow Function** (função de seta): forma mais curta de declarar funções, introduzida no ES6. Não tem seu próprio `this` e é ideal para funções pequenas.\n\nExemplo:\n```js\nconst soma = (a, b) => a + b;\n```"
+    },
+    {
+      "cmd": "const saudacao = function(nome) { return `Olá, ${nome}`; };",
+      "desc": "**Função anônima**: uma função **sem nome**, geralmente atribuída a uma variável ou passada como argumento. Pode ser usada dinamicamente.\n\nExemplo:\n```js\nconst saudacao = function(nome) {\n  return `Olá, ${nome}`;\n};\n```"
+    }
+  ]
+},
+  {
+  "number": 6,
+  "emoji": "🍇",
+  "title": "Arrays",
+  "color": "purple",
+  "commands": [
+    {
+      "cmd": "let frutas = ['maçã', 'banana'];",
+      "desc": "**Declaração de array**: um array é uma estrutura de dados que armazena múltiplos valores em uma única variável. Pode conter qualquer tipo de dado.\n\nExemplo:\n```js\nlet frutas = ['maçã', 'banana'];\n```"
+    },
+    {
+      "cmd": "frutas.push('uva');",
+      "desc": "**Adiciona ao final**: o método `push()` insere um novo elemento **no final do array**.\n\nExemplo:\n```js\nfrutas.push('uva'); // ['maçã', 'banana', 'uva']\n```"
+    },
+    {
+      "cmd": "frutas.pop();",
+      "desc": "**Remove do final**: o método `pop()` remove o **último elemento** do array e o retorna.\n\nExemplo:\n```js\nfrutas.pop(); // remove 'banana'\n```"
+    },
+    {
+      "cmd": "frutas.shift();",
+      "desc": "**Remove do início**: `shift()` remove o **primeiro item** do array e retorna esse valor.\n\nExemplo:\n```js\nfrutas.shift(); // remove 'maçã'\n```"
+    },
+    {
+      "cmd": "frutas.includes('maçã');",
+      "desc": "**Verifica se um valor existe** no array. Retorna `true` ou `false`.\n\nExemplo:\n```js\nfrutas.includes('maçã'); // true ou false\n```"
+    },
+    {
+      "cmd": "frutas.map(item => item.toUpperCase());",
+      "desc": "**Transforma os elementos** do array sem alterar o original. `map()` aplica uma função a cada item e retorna um novo array.\n\nExemplo:\n```js\nconst maiusculas = frutas.map(item => item.toUpperCase());\n```"
+    }
+  ]
+},
+  {
+  "number": 7,
+  "emoji": "🧱",
+  "title": "Objetos",
+  "color": "gray",
+  "commands": [
+    {
+      "cmd": "let pessoa = { nome: 'Ana', idade: 30 };",
+      "desc": "**Criação de objeto**: um objeto em JavaScript é uma coleção de pares chave-valor. Permite agrupar dados relacionados, como nome e idade de uma pessoa.\n\nExemplo:\n```js\nlet pessoa = {\n  nome: 'Ana',\n  idade: 30\n};\n```"
+    },
+    {
+      "cmd": "pessoa.nome",
+      "desc": "**Acessa propriedade**: para acessar o valor de uma propriedade de um objeto, utiliza-se a notação de ponto (`objeto.propriedade`).\n\nExemplo:\n```js\nconsole.log(pessoa.nome); // 'Ana'\n```"
+    },
+    {
+      "cmd": "const { nome, idade } = pessoa;",
+      "desc": "**Desestruturação de objeto**: extrai valores diretamente das propriedades de um objeto e os atribui a variáveis com o mesmo nome.\n\nExemplo:\n```js\nconst { nome, idade } = pessoa;\nconsole.log(nome); // 'Ana'\n```"
+    }
+  ]
+},
+  {
+  "number": 8,
+  "emoji": "🏛",
+  "title": "Classes",
+  "color": "teal",
+  "commands": [
+    {
+      "cmd": "class Pessoa { constructor(nome) { this.nome = nome; } }",
+      "desc": "**Declaração de classe**: a palavra-chave `class` define uma estrutura que serve como molde para criar objetos. O método `constructor` é executado automaticamente na criação de uma nova instância.\n\nExemplo:\n```js\nclass Pessoa {\n  constructor(nome) {\n    this.nome = nome;\n  }\n}\n```"
+    },
+    {
+      "cmd": "new Pessoa('João')",
+      "desc": "**Instanciação de objeto**: usa-se a palavra-chave `new` para criar um novo objeto baseado na classe definida. O `constructor` é chamado com os parâmetros fornecidos.\n\nExemplo:\n```js\nconst p1 = new Pessoa('João');\nconsole.log(p1.nome); // 'João'\n```"
+    }
+  ]
+},
+  {
+  "number": 9,
+  "emoji": "🧾",
+  "title": "JSON",
+  "color": "orange",
+  "commands": [
+    {
+      "cmd": "JSON.parse(string)",
+      "desc": "**Converte uma string JSON em um objeto JavaScript real.** Útil ao receber dados de uma API ou arquivo.\n\nA string deve estar no formato JSON válido (chaves, aspas duplas, etc).\n\nExemplo:\n```js\nconst json = '{\"nome\": \"Carlos\", \"idade\": 40}';\nconst obj = JSON.parse(json);\nconsole.log(obj.nome); // 'Carlos'\n```"
+    },
+    {
+      "cmd": "JSON.stringify(obj)",
+      "desc": "**Converte um objeto JavaScript em uma string JSON.** Útil para salvar dados, enviar para uma API ou armazenar em localStorage.\n\nExemplo:\n```js\nconst obj = { nome: 'Carlos', idade: 40 };\nconst json = JSON.stringify(obj);\nconsole.log(json); // '{\"nome\":\"Carlos\",\"idade\":40}'\n```"
+    }
+  ]
+},
+  {
+  "number": 10,
+  "emoji": "📑",
+  "title": "DOM",
+  "color": "violet",
+  "commands": [
+    {
+      "cmd": "document.getElementById('id')",
+      "desc": "**Seleciona um elemento do HTML pelo atributo `id`.** Retorna o primeiro elemento que possuir o ID fornecido. Muito usado para manipulação direta de elementos específicos.\n\nExemplo:\n```js\nconst titulo = document.getElementById('meuTitulo');\n```"
+    },
+    {
+      "cmd": "element.textContent = 'Texto';",
+      "desc": "**Modifica o conteúdo textual de um elemento HTML.** Substitui todo o texto dentro do elemento (sem interpretar HTML).\n\nExemplo:\n```js\ndocument.getElementById('mensagem').textContent = 'Olá, mundo!';\n```"
+    },
+    {
+      "cmd": "element.classList.add('classe')",
+      "desc": "**Adiciona uma classe CSS ao elemento HTML.** Isso permite aplicar estilos ou comportamentos definidos em CSS ou JS dinamicamente.\n\nExemplo:\n```js\nbotao.classList.add('ativo');\n```"
+    }
+  ]
+},
+  {
+  "number": 11,
+  "emoji": "🖱",
+  "title": "Eventos",
+  "color": "pink",
+  "commands": [
+    {
+      "cmd": "element.addEventListener('click', () => {...})",
+      "desc": "**Adiciona um listener de evento**: este método permite monitorar e executar uma função quando um evento específico ocorre em um elemento, como um clique. É fundamental para interatividade em páginas web.\n\nExemplo:\n```js\nconst botao = document.getElementById('meuBotao');\nbotao.addEventListener('click', () => {\n  console.log('Botão foi clicado!');\n});\n```"
+    }
+  ]
+},
+  {
+  "number": 12,
+  "emoji": "🔄",
+  "title": "Promises & Fetch",
+  "color": "cyan",
+  "commands": [
+    {
+      "cmd": "fetch(url).then(res => res.json())",
+      "desc": "**Executa uma requisição HTTP utilizando o método `fetch()`.**\n\nEsse método retorna uma **Promise** e permite acessar APIs. O `res.json()` converte a resposta (response) para objeto JSON.\n\nExemplo:\n```js\nfetch('https://api.exemplo.com/dados')\n  .then(res => res.json())\n  .then(data => console.log(data))\n  .catch(err => console.error(err));\n```"
+    },
+    {
+      "cmd": "new Promise((resolve, reject) => {...})",
+      "desc": "**Cria uma Promise manualmente.**\n\nUma **Promise** representa uma operação assíncrona que pode ser finalizada com sucesso (`resolve`) ou com erro (`reject`).\n\nExemplo:\n```js\nconst promessa = new Promise((resolve, reject) => {\n  const sucesso = true;\n  if (sucesso) {\n    resolve('Tudo certo!');\n  } else {\n    reject('Algo deu errado.');\n  }\n});\n\npromessa.then(msg => console.log(msg)).catch(erro => console.error(erro));\n```"
+    }
+  ]
+},
+  {
+  "number": 13,
+  "emoji": "⏳",
+  "title": "Async/Await",
+  "color": "yellow",
+  "commands": [
+    {
+      "cmd": "async function load() { await fetch(url); }",
+      "desc": "**Declara uma função assíncrona com `async` e usa `await` para aguardar o resultado de uma Promise.**\n\nO `async` transforma a função em uma que retorna uma Promise. O `await` pausa a execução até que a Promise seja resolvida, simplificando o uso de chamadas assíncronas como `fetch`.\n\nExemplo:\n```js\nasync function load() {\n  try {\n    const resposta = await fetch('https://api.exemplo.com');\n    const dados = await resposta.json();\n    console.log(dados);\n  } catch (erro) {\n    console.error('Erro ao carregar:', erro);\n  }\n}\n```"
+    }
+  ]
+},
+  {
+  "number": 14,
+  "emoji": "✨",
+  "title": "ES6+ Features",
+  "color": "green",
+  "commands": [
+    {
+      "cmd": "`Olá, ${nome}`",
+      "desc": "**Template Literal**: permite interpolar variáveis dentro de strings usando a sintaxe `${variável}` e crase (`` ` ``) em vez de aspas.\n\nExemplo:\n```js\nconst nome = 'Maria';\nconsole.log(`Olá, ${nome}`); // Olá, Maria\n```"
+    },
+    {
+      "cmd": "...array",
+      "desc": "**Operador Spread/Rest**:\n- **Spread (`...`)**: expande os elementos de um array ou objeto.\n- **Rest (`...`)**: agrupa argumentos ou propriedades restantes.\n\nExemplos:\n```js\n// Spread\nconst nums = [1, 2, 3];\nconst mais = [...nums, 4];\n\n// Rest\nfunction soma(...valores) {\n  return valores.reduce((a, b) => a + b);\n}\n```"
+    },
+    {
+      "cmd": "function falar(nome = 'Visitante') {}",
+      "desc": "**Parâmetros padrão**: define valores padrão para parâmetros de função. Se o argumento não for passado, o valor padrão será usado.\n\nExemplo:\n```js\nfunction falar(nome = 'Visitante') {\n  console.log(`Olá, ${nome}`);\n}\n\nfalar(); // Olá, Visitante\n```"
+    }
+  ]
+},
+  {
+  "number": 15,
+  "emoji": "💾",
+  "title": "Local Storage",
+  "color": "blue",
+  "commands": [
+    {
+      "cmd": "localStorage.setItem('chave', 'valor')",
+      "desc": "**Armazena um valor no navegador**. Os dados persistem mesmo após o fechamento da aba ou do navegador. Tanto a chave quanto o valor devem ser strings.\n\nExemplo:\n```js\nlocalStorage.setItem('nome', 'João');\n```"
+    },
+    {
+      "cmd": "localStorage.getItem('chave')",
+      "desc": "**Lê um valor salvo no Local Storage** com base na chave especificada. Retorna `null` se a chave não existir.\n\nExemplo:\n```js\nconst nome = localStorage.getItem('nome');\nconsole.log(nome); // 'João'\n```"
+    },
+    {
+      "cmd": "localStorage.removeItem('chave')",
+      "desc": "**Remove uma chave e seu valor correspondente do armazenamento local.**\n\nExemplo:\n```js\nlocalStorage.removeItem('nome');\n```"
+    }
+  ]
+},
+  {
+  "number": 16,
+  "emoji": "📅",
+  "title": "Datas",
+  "color": "brown",
+  "commands": [
+    {
+      "cmd": "let hoje = new Date();",
+      "desc": "**Cria um novo objeto de data e hora.**\nO construtor `new Date()` gera a data e hora atual do sistema no momento da execução.\n\nExemplo:\n```js\nlet hoje = new Date();\nconsole.log(hoje); // ex: Wed May 15 2025 10:30:00 GMT-0300\n```"
+    },
+    {
+      "cmd": "hoje.getFullYear()",
+      "desc": "**Retorna o ano com 4 dígitos da data armazenada no objeto.**\nÚtil para obter o ano atual ou de qualquer data definida.\n\nExemplo:\n```js\nconst ano = hoje.getFullYear();\nconsole.log(ano); // ex: 2025\n```"
+    }
+  ]
+},
+  {
+  "number": 17,
+  "emoji": "🔍",
+  "title": "Console & Debug",
+  "color": "gray",
+  "commands": [
+    {
+      "cmd": "console.log('Mensagem')",
+      "desc": "**Exibe uma mensagem no console do navegador.**\nUsado para depuração, verificando valores e fluxo do código.\n\nExemplo:\n```js\nconsole.log('Iniciando script...');\n```"
+    },
+    {
+      "cmd": "console.error('Erro!')",
+      "desc": "**Mostra uma mensagem de erro no console**, geralmente com destaque em vermelho. Muito útil para indicar falhas específicas em execuções ou chamadas.\n\nExemplo:\n```js\nconsole.error('Algo deu errado!');\n```"
+    },
+    {
+      "cmd": "console.table([{}])",
+      "desc": "**Exibe dados tabulares no console.** Ideal para visualizar arrays de objetos ou objetos com várias propriedades de forma organizada.\n\nExemplo:\n```js\nconst usuarios = [\n  { nome: 'Ana', idade: 30 },\n  { nome: 'João', idade: 25 }\n];\nconsole.table(usuarios);\n```"
+    }
+  ]
+}
+]
