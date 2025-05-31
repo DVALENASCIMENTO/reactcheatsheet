@@ -1,257 +1,317 @@
 [
   {
     "number": 1,
-    "emoji": "⚛️",
-    "title": "Fundamentos do React",
+    "emoji": "⚛",
+    "title": "Fundamentos de JavaScript (Pré-Requisitos)",
     "color": "amber",
     "commands": [
       {
-        "cmd": "React (SPA, Virtual DOM, JSX)",
-        "desc": "React é uma biblioteca JavaScript para construir interfaces de usuário. SPA (Single Page Application) usa uma única página com navegação dinâmica. O Virtual DOM melhora a performance ao atualizar apenas o necessário. JSX permite escrever HTML dentro do JavaScript."
+        "cmd": "Variáveis e tipos de dados",
+        "desc": "Aprenda como declarar variáveis em JavaScript usando `let` e `const` e entenda quando utilizar cada um. Explore também os tipos primitivos: `string` (texto), `number` (números), `boolean` (verdadeiro ou falso), `undefined` (valor indefinido), `null` (ausência intencional de valor), `symbol` (identificadores únicos) e `bigint` (para números muito grandes). Esses conceitos são fundamentais para a estruturação do seu código."
       },
       {
-        "cmd": "npx create-react-app meu-app / npm create vite@latest",
-        "desc": "Cria um projeto React com toda configuração inicial usando Create React App ou Vite."
+        "cmd": "Funções e escopos",
+        "desc": "Saiba como declarar funções usando a palavra-chave `function` ou como funções anônimas (`arrow functions`). Entenda o conceito de escopo — onde as variáveis são visíveis e acessíveis — e as diferenças entre escopo global e local, além de como evitar conflitos ou vazamentos de variáveis."
       },
       {
-        "cmd": "JSX + Babel",
-        "desc": "JSX é uma sintaxe parecida com HTML. Babel converte JSX para JavaScript puro que o navegador entende."
+        "cmd": "Arrays e objetos",
+        "desc": "Os arrays permitem armazenar listas de dados e os objetos permitem estruturar dados em pares de chave e valor. Pratique métodos essenciais como `push`, `map`, `filter` e `reduce` para manipular arrays, e saiba como acessar e modificar propriedades e métodos dos objetos para organizar melhor seus dados."
       },
       {
-        "cmd": "function MeuComponente() { return <div>Olá</div>; }",
-        "desc": "Componentes funcionais retornam JSX. São funções puras que constroem blocos da interface."
+        "cmd": "Promises e async/await",
+        "desc": "JavaScript é assíncrono, ou seja, pode lidar com tarefas que demoram para responder (como chamadas de API). Aprenda a trabalhar com `Promises` para lidar com esses fluxos assíncronos, e como simplificar essa leitura usando a sintaxe `async/await` para escrever código mais claro e eficiente."
       },
       {
-        "cmd": "<Componente titulo='Olá'>{children}</Componente>",
-        "desc": "Props são dados passados a componentes. `children` representa os elementos internos."
+        "cmd": "Manipulação de DOM",
+        "desc": "O DOM (Document Object Model) representa a estrutura HTML de uma página. Aprenda a acessar e alterar elementos usando `document.querySelector`, `innerHTML`, `classList`, entre outros métodos. Essa manipulação é essencial para interatividade e dinamicidade em páginas web."
       },
       {
-        "cmd": "const [count, setCount] = useState(0);",
-        "desc": "`useState` cria estados internos. `setCount` atualiza o valor e re-renderiza o componente."
-      },
-      {
-        "cmd": "<button onClick={handleClick}>Clique</button>",
-        "desc": "Eventos como `onClick` e `onChange` disparam funções dentro do JSX."
-      },
-      {
-        "cmd": "{condicao ? <Sim /> : <Nao />}",
-        "desc": "Renderização condicional com ternário ou `&&`. Mostra componentes conforme estado/props."
-      },
-      {
-        "cmd": "array.map(item => <li key={item.id}>{item.nome}</li>)",
-        "desc": "Para renderizar listas, use `.map()`. Cada item precisa de uma `key` única."
+        "cmd": "Módulos ES6+",
+        "desc": "Organize melhor seu projeto utilizando `import` e `export` para dividir e reutilizar trechos de código em arquivos separados. Essa modularização aumenta a legibilidade e facilita a manutenção de grandes aplicações."
       }
     ]
   },
   {
     "number": 2,
     "emoji": "🟠",
-    "title": "React Intermediário",
+    "title": "Primeiros Passos com React",
     "color": "orange",
     "commands": [
       {
-        "cmd": "useEffect, useRef, useContext",
-        "desc": "Hooks adicionais: `useEffect` lida com efeitos colaterais, `useRef` referencia elementos, `useContext` acessa contexto global."
+        "cmd": "Conceito de SPA",
+        "desc": "Uma Single Page Application (SPA) é um aplicativo web que carrega apenas uma vez e atualiza o conteúdo dinamicamente sem recarregar a página inteira. Isso resulta em navegação mais rápida, melhorando significativamente a experiência do usuário."
       },
       {
-        "cmd": "Componentes controlados x não controlados",
-        "desc": "Controlados: valor via state. Não controlados: valor via `ref`. Use controlados para melhor controle de formulários."
+        "cmd": "O que é React e por que usá-lo",
+        "desc": "React é uma biblioteca JavaScript criada pelo Facebook, usada para construir interfaces de usuário de forma reativa. Ele utiliza componentes reutilizáveis que melhoram a manutenção, escalabilidade e performance das aplicações."
       },
       {
-        "cmd": "<form onSubmit={handleSubmit}>...</form>",
-        "desc": "Formulários com validação devem prevenir recarregamento (event.preventDefault) e validar dados no submit."
+        "cmd": "Instalação e criação de projeto",
+        "desc": "Configure rapidamente um projeto React usando ferramentas como `npx create-react-app` ou `npm create vite@latest`. Essas ferramentas já fornecem estrutura básica, scripts de desenvolvimento e recursos essenciais para começar a codar sem preocupações iniciais."
       },
       {
-        "cmd": "CSS Modules / Styled Components / Tailwind",
-        "desc": "Três formas de estilizar: CSS Modules para escopo local, Styled Components para JS, Tailwind para utilitários."
+        "cmd": "Estrutura de pastas e arquivos",
+        "desc": "Entenda como um projeto React é organizado: a pasta `public` para arquivos estáticos (HTML, imagens), a pasta `src` para o código-fonte (componentes, estilos), o `index.html` como ponto de entrada e o `App.js` como componente principal."
       },
       {
-        "cmd": "components/MeuComponente.jsx",
-        "desc": "Organize componentes por pastas, com nomes claros e responsabilidade única."
-      },
-      {
-        "cmd": "<Layout><Header /><Main /></Layout>",
-        "desc": "Composição de componentes permite combinar e reutilizar blocos da UI de forma escalável."
-      },
-      {
-        "cmd": "useEffect(() => {...}, [dependencias])",
-        "desc": "Simula ciclo de vida do componente: montar, atualizar e desmontar."
+        "cmd": "JSX",
+        "desc": "JSX é uma extensão de sintaxe que permite escrever HTML dentro do JavaScript, tornando a construção de componentes visuais mais intuitiva. Ele é convertido para JavaScript puro por ferramentas como Babel, mantendo o projeto compatível com os navegadores."
       }
     ]
   },
   {
     "number": 3,
     "emoji": "🔵",
-    "title": "React Avançado",
+    "title": "Componentes",
     "color": "blue",
     "commands": [
       {
-        "cmd": "React Router v6+",
-        "desc": "Roteamento declarativo com `<Routes>`, `<Route>`, `useNavigate`, `useParams`. Suporte a rotas aninhadas."
+        "cmd": "Function Components",
+        "desc": "Crie interfaces em React usando funções JavaScript que retornam JSX. Esses componentes são fáceis de entender, reutilizar e facilitam a composição de telas mais complexas."
       },
       {
-        "cmd": "Context API + useReducer",
-        "desc": "Gerencia estados globais com reducer para lógica complexa. `dispatch` substitui `setState`."
+        "cmd": "Props",
+        "desc": "As `props` (propriedades) são dados que você pode passar para componentes filhos, tornando-os dinâmicos e reutilizáveis. Elas são a base para a comunicação entre componentes em React."
       },
       {
-        "cmd": "Lifting State Up",
-        "desc": "Elevar o estado ao componente pai permite compartilhamento de dados entre filhos."
+        "cmd": "useState",
+        "desc": "O hook `useState` permite criar estados locais em componentes de função. Ele retorna um par: o valor atual do estado e uma função que o atualiza, disparando um novo render automático do componente."
       },
       {
-        "cmd": "useRef para DOM",
-        "desc": "`useRef` acessa e manipula elementos DOM diretamente (focus, scroll etc)."
+        "cmd": "Eventos",
+        "desc": "React usa eventos semelhantes ao JavaScript puro, mas com nomes em camelCase, como `onClick` e `onChange`. Esses eventos permitem capturar interações do usuário e atualizar o estado ou a interface."
       },
       {
-        "cmd": "Custom Hooks",
-        "desc": "Encapsule lógica reutilizável em funções como `useForm`, `useFetch`, etc."
-      },
-      {
-        "cmd": "Error Boundaries",
-        "desc": "Capturam erros de renderização com componentes de classe usando `componentDidCatch`."
-      },
-      {
-        "cmd": "Suspense + Lazy",
-        "desc": "Importação dinâmica com `React.lazy()` e fallback com `<Suspense>`."
-      },
-      {
-        "cmd": "memo / useMemo / useCallback",
-        "desc": "`memo` evita re-renderizações. `useMemo` memoriza valores. `useCallback` memoriza funções."
+        "cmd": "Listas e chaves",
+        "desc": "Para renderizar listas de dados, use o método `map`. Cada elemento renderizado deve ter uma `key` única para que o React possa identificar e atualizar itens de forma eficiente, evitando problemas de performance."
       }
     ]
   },
   {
     "number": 4,
-    "emoji": "🔴",
-    "title": "Integração com Back-End",
-    "color": "red",
+    "emoji": "🟣",
+    "title": "Hooks Essenciais",
+    "color": "purple",
     "commands": [
       {
-        "cmd": "fetch / axios",
-        "desc": "Ambos fazem requisições HTTP. Axios possui interceptadores, fetch é nativo."
+        "cmd": "useState",
+        "desc": "Retorna um par: o valor atual do estado e uma função para atualizá-lo. Essencial para armazenar valores dinâmicos dentro de componentes de função."
       },
       {
-        "cmd": "REST API (GET, POST, PUT, DELETE)",
-        "desc": "Comunique-se com back-end usando métodos HTTP para ler e alterar dados."
+        "cmd": "useEffect",
+        "desc": "Permite executar efeitos colaterais (como requisições de dados, animações ou alterações no DOM) após a renderização do componente. Ele substitui métodos de ciclo de vida em componentes de classe."
       },
       {
-        "cmd": "CRUD completo",
-        "desc": "Crie telas para listar, adicionar, editar e excluir dados com integração de APIs."
-      },
-      {
-        "cmd": "Login / Logout",
-        "desc": "Use forms + requisições para autenticar usuários. Armazene o token após login."
-      },
-      {
-        "cmd": "localStorage / sessionStorage",
-        "desc": "Persistência de dados no navegador. Ideal para tokens, preferências, temas etc."
+        "cmd": "Regras dos Hooks",
+        "desc": "Hooks devem ser chamados apenas no topo de componentes de função ou em hooks customizados. Eles não devem ser usados dentro de loops, condicionais ou funções aninhadas, garantindo que a ordem de execução seja sempre a mesma."
       }
     ]
   },
   {
     "number": 5,
-    "emoji": "⚫",
-    "title": "Testes em React",
-    "color": "black",
+    "emoji": "🟡",
+    "title": "Estilização",
+    "color": "yellow",
     "commands": [
       {
-        "cmd": "React Testing Library (RTL)",
-        "desc": "Testa componentes de forma orientada ao usuário. Usa queries como `getByText`, `getByRole`."
+        "cmd": "CSS Modules",
+        "desc": "Permite escopar estilos CSS a um componente específico, evitando conflitos de nome de classes em grandes projetos. Cada arquivo CSS gera um objeto de classes com nomes únicos para uso em JSX."
       },
       {
-        "cmd": "Jest",
-        "desc": "Framework de testes para JS/TS. Usado com RTL para testes unitários e mocks."
+        "cmd": "Styled Components",
+        "desc": "Uma biblioteca para escrever CSS dentro de JavaScript, criando componentes estilizados e dinâmicos. Ela facilita a aplicação de temas e a composição de estilos, melhorando a manutenção do código."
       },
       {
-        "cmd": "Teste de componentes",
-        "desc": "Teste interações, renderização, entradas e saídas de componentes isolados."
+        "cmd": "Tailwind CSS",
+        "desc": "Um framework utilitário que oferece classes pré-definidas para construir layouts responsivos e consistentes. Ele economiza tempo, pois evita a escrita de CSS do zero e garante consistência visual."
       },
       {
-        "cmd": "Teste de hooks",
-        "desc": "Use `@testing-library/react-hooks` ou `renderHook` para testar lógica dos hooks."
+        "cmd": "Component libraries",
+        "desc": "Bibliotecas como Material UI ou Ant Design oferecem componentes visuais prontos, consistentes e personalizáveis, acelerando o desenvolvimento e garantindo uma experiência de usuário profissional."
       }
     ]
   },
   {
     "number": 6,
-    "emoji": "🟣",
-    "title": "Gerenciamento de Estado Avançado",
-    "color": "purple",
+    "emoji": "🟠",
+    "title": "Gerenciamento de Estado Global",
+    "color": "orange",
     "commands": [
       {
-        "cmd": "Redux / Zustand",
-        "desc": "Redux oferece estrutura robusta e padrão. Zustand é leve e simples, baseado em hooks."
+        "cmd": "Context API",
+        "desc": "Recurso do React que permite compartilhar dados entre múltiplos componentes sem passar props manualmente por todos eles (props drilling). Ideal para dados globais como tema, idioma ou usuário logado."
       },
       {
-        "cmd": "Redux Toolkit",
-        "desc": "API oficial para simplificar Redux: `createSlice`, `configureStore`, `createAsyncThunk`."
+        "cmd": "Redux",
+        "desc": "Biblioteca externa que oferece um fluxo de dados previsível usando actions e reducers. Ideal para gerenciar estados complexos em aplicações grandes, mantendo consistência e facilitando o debug."
       },
       {
-        "cmd": "Context vs Redux",
-        "desc": "Context é ideal para dados simples e estáticos. Redux lida melhor com grandes fluxos e lógica complexa."
-      },
-      {
-        "cmd": "Redux DevTools",
-        "desc": "Ferramenta para inspecionar e depurar ações e estados em Redux."
+        "cmd": "Alternativas modernas",
+        "desc": "Bibliotecas como Zustand e Recoil surgiram para oferecer soluções de estado global mais leves, com APIs mais simples e menor sobrecarga para projetos que não precisam da complexidade do Redux."
       }
     ]
   },
   {
     "number": 7,
-    "emoji": "⚪",
-    "title": "Ferramentas e Boas Práticas",
-    "color": "gray",
+    "emoji": "🟡",
+    "title": "Consumo de APIs",
+    "color": "yellow",
     "commands": [
       {
-        "cmd": "ESLint + Prettier",
-        "desc": "Padroniza e formata automaticamente o código. Evita erros e melhora a leitura."
+        "cmd": "Fetch e Axios",
+        "desc": "Duas formas principais de fazer requisições HTTP em JavaScript. `fetch` é nativo e simples, enquanto `axios` tem recursos avançados como interceptadores, suporte a requisições simultâneas e melhores mensagens de erro."
       },
       {
-        "cmd": "PropTypes / TypeScript",
-        "desc": "PropTypes valida props em JS. TypeScript fornece tipagem estática para maior segurança."
+        "cmd": "useEffect + useState",
+        "desc": "Combine esses hooks para buscar dados de APIs: useEffect para acionar a busca no momento certo e useState para armazenar o resultado, atualizando a interface automaticamente."
       },
       {
-        "cmd": "Git + versionamento",
-        "desc": "Use Git para salvar versões, trabalhar em equipe e manter histórico de alterações."
-      },
-      {
-        "cmd": "Deploy (Vercel / Netlify / GitHub Pages)",
-        "desc": "Hospede seu app React gratuitamente com plataformas modernas e simples."
-      },
-      {
-        "cmd": "CI/CD com GitHub Actions",
-        "desc": "Automatize testes e deploy com GitHub Actions sempre que houver push no repositório."
+        "cmd": "Tratamento de erros e loading",
+        "desc": "Implemente estados para controlar a exibição de mensagens de carregamento (`loading`) e lidar com falhas de rede (`error`), melhorando a experiência do usuário em casos de demora ou erros na conexão."
       }
     ]
   },
   {
     "number": 8,
-    "emoji": "🟤",
-    "title": "Extras e Profissionalização",
-    "color": "brown",
+    "emoji": "🔴",
+    "title": "Rotas (React Router)",
+    "color": "red",
     "commands": [
       {
-        "cmd": "Next.js (SSR)",
-        "desc": "Framework baseado em React com suporte a Server Side Rendering e rotas automáticas."
+        "cmd": "Instalação e configuração",
+        "desc": "Use `npm install react-router-dom` ou `yarn add react-router-dom` para instalar a biblioteca de roteamento e configure o `BrowserRouter` no topo da árvore de componentes para ativar o sistema de rotas."
+      },
+      {
+        "cmd": "Componentes principais",
+        "desc": "Use os componentes `<Routes>` e `<Route>` para definir quais componentes devem ser exibidos em quais URLs, permitindo navegação fluida e declarativa no app."
+      },
+      {
+        "cmd": "Roteamento dinâmico",
+        "desc": "Use `useParams` para capturar parâmetros da URL (como IDs) e `useSearchParams` para manipular buscas e filtros na barra de endereços, personalizando a experiência do usuário."
+      },
+      {
+        "cmd": "Rotas privadas",
+        "desc": "Proteja áreas sensíveis do app criando componentes de autenticação que redirecionam usuários não logados ou sem permissões, garantindo segurança e controle de acesso."
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "emoji": "🔵",
+    "title": "Componentes Avançados e Padrões",
+    "color": "blue",
+    "commands": [
+      {
+        "cmd": "Refs e useRef",
+        "desc": "Use o `useRef` para criar referências a elementos do DOM (foco, rolagem) ou armazenar valores persistentes entre renderizações sem disparar re-renderizações."
+      },
+      {
+        "cmd": "Memoization",
+        "desc": "Use técnicas como `React.memo`, `useMemo` e `useCallback` para otimizar a performance do app, evitando renderizações desnecessárias de componentes ou cálculos complexos em cada atualização."
+      },
+      {
+        "cmd": "Render Props e HOC",
+        "desc": "Padrões que permitem compartilhar lógica entre componentes: Render Props passa funções como filhos, e HOC (Higher Order Component) envolve componentes para estender suas funcionalidades."
+      },
+      {
+        "cmd": "Lazy loading",
+        "desc": "Use `React.lazy` e `<Suspense>` para carregar componentes sob demanda, diminuindo o tamanho do bundle inicial e acelerando o carregamento do app para o usuário."
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "emoji": "⚫",
+    "title": "Testes",
+    "color": "black",
+    "commands": [
+      {
+        "cmd": "Jest + React Testing Library",
+        "desc": "Ferramentas líderes para testes unitários e de integração em React. O Jest executa os testes e fornece ferramentas de mock e asserção, enquanto a React Testing Library foca na simulação de interações reais do usuário."
+      },
+      {
+        "cmd": "Testes de componentes",
+        "desc": "Assegure que componentes renderizam corretamente e respondem como esperado a interações (cliques, mudanças de input, etc.)."
+      },
+      {
+        "cmd": "Testes de integração",
+        "desc": "Valide fluxos mais amplos (como um formulário completo), garantindo que diferentes partes do app trabalham juntas como deveriam em um cenário real."
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "emoji": "⚡",
+    "title": "Performance e Otimização",
+    "color": "yellow",
+    "commands": [
+      {
+        "cmd": "Code splitting",
+        "desc": "Quebre o código do aplicativo em pedaços menores usando `import()` dinâmico. Isso faz com que partes do app sejam carregadas apenas quando necessárias, reduzindo o tempo de carregamento inicial e melhorando a experiência do usuário."
+      },
+      {
+        "cmd": "Evitar re-renderizações",
+        "desc": "Use `React.memo` para componentes que recebem as mesmas props e `useMemo`/`useCallback` para memorizar valores e funções. Essas técnicas evitam que partes da interface sejam re-renderizadas sem necessidade, economizando recursos."
+      },
+      {
+        "cmd": "Otimização de renderizações",
+        "desc": "Estruture bem seus componentes, evite cálculos pesados dentro do render e mantenha a árvore de componentes enxuta. Isso ajuda o React a atualizar a interface de forma mais rápida e eficiente."
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "emoji": "🚀",
+    "title": "Deploy e Produção",
+    "color": "green",
+    "commands": [
+      {
+        "cmd": "Deploy em Vercel, Netlify",
+        "desc": "Essas plataformas permitem que você hospede seu projeto React de forma gratuita e com integração contínua, facilitando o lançamento de novas versões e atualizações automáticas a partir do repositório."
+      },
+      {
+        "cmd": "Variáveis de ambiente",
+        "desc": "Configure chaves e variáveis sensíveis como APIs e tokens de forma segura usando arquivos `.env`. Isso separa configurações de produção e desenvolvimento, evitando exposições acidentais de dados."
+      },
+      {
+        "cmd": "PWA e SEO básico",
+        "desc": "Transforme sua aplicação em um Progressive Web App (PWA), permitindo que ela funcione offline e seja instalada como um app no celular. Além disso, configure tags básicas de SEO (título, descrição) para melhorar a visibilidade em motores de busca."
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "emoji": "🌟",
+    "title": "Avançando Além",
+    "color": "pink",
+    "commands": [
+      {
+        "cmd": "Next.js",
+        "desc": "Um framework que combina React com Server-Side Rendering (SSR) e geração estática de páginas, melhorando a performance e o SEO do seu projeto. É ideal para apps que precisam ser rápidos e amigáveis a motores de busca."
       },
       {
         "cmd": "React Native",
-        "desc": "Construa apps mobile nativos com a mesma base do React para web."
+        "desc": "Use a mesma base de React para criar aplicativos móveis nativos para Android e iOS. Ideal para quem quer expandir o app web para o mobile, compartilhando lógica e experiência de desenvolvimento."
       },
       {
-        "cmd": "SEO com React",
-        "desc": "React puro não é ideal para SEO. Use SSR (Next.js) ou pré-renderização (Gatsby)."
+        "cmd": "Frameworks modernos",
+        "desc": "Explore novas ferramentas como Remix (com foco em performance e UX) e Astro (para sites estáticos e ultra rápidos), ampliando seu repertório de tecnologias e aprendizados."
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "emoji": "💡",
+    "title": "Dicas Finais",
+    "color": "gray",
+    "commands": [
+      {
+        "cmd": "Prática constante",
+        "desc": "A melhor forma de aprender e consolidar conceitos é criar projetos reais: experimente ideias, refaça exemplos e brinque com os conceitos para reforçar sua confiança e criatividade no desenvolvimento."
       },
       {
-        "cmd": "Design Patterns em React",
-        "desc": "Use padrões como Container/Presentational, Hooks reutilizáveis e Render Props."
-      },
-      {
-        "cmd": "Clean Code + Arquitetura",
-        "desc": "Organize diretórios por domínio, separe responsabilidades, evite código duplicado e comente com clareza."
-      },
-      {
-        "cmd": "Acessibilidade (ARIA)",
-        "desc": "Implemente `aria-label`, `role`, foco navegável e contraste adequado para usuários com deficiência."
+        "cmd": "Projetos sugeridos",
+        "desc": "Alguns exemplos de projetos simples, mas muito úteis para treinar: um To-Do List com adição e remoção de tarefas; um app que consome dados de uma API e exibe resultados; ou a cópia de alguma interface famosa para praticar estilos e responsividade."
       }
     ]
   }
