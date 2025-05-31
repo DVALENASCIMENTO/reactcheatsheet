@@ -60,6 +60,35 @@
     ]
   },
   {
+  "number": 2.5,
+  "emoji": "🛠️",
+  "title": "Ferramentas de Build e Bundling",
+  "color": "gray",
+  "commands": [
+    {
+      "cmd": "Webpack",
+      "desc": "Empacotador de módulos robusto, padrão de mercado para aplicações React. Permite configurações detalhadas, otimização, minificação e integração com loaders (como Babel) e plugins. Ideal para projetos complexos e com muitas dependências.",
+      "link": "https://dvalenascimento.github.io/webpackcheatsheet/"
+    },
+    {
+      "cmd": "Vite",
+      "desc": "Ferramenta moderna e ultrarrápida para desenvolvimento de aplicações. Usa ESBuild para transformar código instantaneamente, e oferece build final otimizado com Rollup. Ótimo para começar novos projetos React rapidamente."
+    },
+    {
+      "cmd": "Parcel",
+      "desc": "Empacotador que funciona sem configuração inicial (zero-config). Simples e rápido para projetos de pequeno e médio porte. Detecta automaticamente arquivos como React, TypeScript, imagens, etc."
+    },
+    {
+      "cmd": "Rollup",
+      "desc": "Focado em bundles minimalistas, usado principalmente em bibliotecas React ou quando é preciso um bundle final muito pequeno. Tem tree-shaking eficiente e gera pacotes otimizados."
+    },
+    {
+      "cmd": "Escolha certa para seu projeto",
+      "desc": "Para projetos React de produção ou empresas, Webpack e Vite são as escolhas principais. Para bibliotecas e componentes compartilháveis, Rollup é ideal. Parcel é ótimo para quem quer começar rápido e simples!"
+    }
+  ]
+},
+  {
     "number": 3,
     "emoji": "🔵",
     "title": "Componentes",
