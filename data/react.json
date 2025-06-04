@@ -72,7 +72,8 @@
     },
     {
       "cmd": "Vite",
-      "desc": "Ferramenta moderna e ultrarrápida para desenvolvimento de aplicações. Usa ESBuild para transformar código instantaneamente, e oferece build final otimizado com Rollup. Ótimo para começar novos projetos React rapidamente."
+      "desc": "Ferramenta moderna e ultrarrápida para desenvolvimento de aplicações. Usa ESBuild para transformar código instantaneamente, e oferece build final otimizado com Rollup. Ótimo para começar novos projetos React rapidamente.",
+      "link": "https://dvalenascimento.github.io/vitecheatsheet/"
     },
     {
       "cmd": "Parcel",
