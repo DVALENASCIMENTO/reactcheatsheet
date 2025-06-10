@@ -342,6 +342,11 @@
       {
         "cmd": "Projetos sugeridos",
         "desc": "Alguns exemplos de projetos simples, mas muito úteis para treinar: um To-Do List com adição e remoção de tarefas; um app que consome dados de uma API e exibe resultados; ou a cópia de alguma interface famosa para praticar estilos e responsividade."
+      },
+      {
+        "cmd": "React Quiz", 
+        "desc": "Alguns exemplos de projetos simples, mas muito úteis para treinar: um To-Do List com adição e remoção de tarefas; um app que consome dados de uma API e exibe resultados; ou a cópia de alguma interface famosa para praticar estilos e responsividade.",
+        "link": "https://dvalenascimento.github.io/reactquiz/"
       }
     ]
   }
